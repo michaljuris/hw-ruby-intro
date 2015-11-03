@@ -1,4 +1,6 @@
 # When done, submit this entire file to the autograder.
+require 'pry'
+#binding.pry
 
 # Part 1
 
@@ -11,11 +13,21 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  arr.sort!
+  s = 0
+  s = arr[-1] + arr[-2] if arr.length > 1
+  s = arr[0 ] if arr.length == 1
+  return s
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  arr.each_index do |index1|
+    arr.each_index do |index2|
+      next if index2 == index1
+      return true if (arr[index1] + arr[index2]) == n
+    end  
+  end
+  return false
 end
 
 # Part 2
