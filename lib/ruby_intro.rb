@@ -3,7 +3,11 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  s = 0
+  arr.each do |element|
+    s += element
+  end
+  return s
 end
 
 def max_2_sum arr
