@@ -1,6 +1,6 @@
 # When done, submit this entire file to the autograder.
 require 'pry'
-#binding.pry
+#  binding.pry
 
 # Part 1
 
@@ -33,15 +33,15 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  !!(s =~ /^[^aeiouAEIOU]/) && !!(s =~ /^[a-zA-Z]/)
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  !!(s =~ /^[10]*00$/) || s == '0'
 end
 
 # Part 3
